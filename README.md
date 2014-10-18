@@ -3,13 +3,16 @@ GPIO-counter
 
 Counts pulses on specified GPIO pin and writes to a logfile. I use this to count the pulses from my electric power meter (DDS-238), where each pulse is 1 Wh (as 1000 pulses per kWh).
 
-Prerequisites:
+Prerequisites
+-------------
 - Raspberry Pi (tested on Raspbian)
 - GPIO python library installed: "sudo apt-get install RPi.GPIO"
 Advice:
 - make gpio-counter.py executable with "chmod +x gpio-counter.py"
 
 
+Usage
+-----
 <pre><code>
 $ sudo ./gpio-counter.py 23 /home/pi/mylogfile-gpio23.txt debug
 Verbose is On
@@ -29,6 +32,7 @@ New value is 330
 </code></pre>
 
 Contents of the resulting logfile
+---------------------------------
 
 <pre><code>
 $ cat gpio-counter 
@@ -37,6 +41,9 @@ $ cat gpio-counter
 </code></pre>
 
 You can feed this info into MRTG
+
+Start at boot / Run a daemon
+----------------------------
 
 To start the counter automatically start at boot time, do this:
 
