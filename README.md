@@ -6,11 +6,12 @@ Counts pulses on specified GPIO pin and writes to a logfile. I use this to count
 Prerequisites:
 - Raspberry Pi (tested on Raspbian)
 - GPIO python library installed: "sudo apt-get install RPi.GPIO"
-
+Advice:
+- make gpio-counter.py executable with "chmod +x gpio-counter.py"
 
 
 <pre><code>
-$ sudo python gpio-counter.py 23 /home/pi/mylogfile-gpio23.txt debug
+$ sudo ./gpio-counter.py 23 /home/pi/mylogfile-gpio23.txt debug
 Verbose is On
 GPIO is 23
 Logfile is /home/pi/mylogfile-gpio23.txt
