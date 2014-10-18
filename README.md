@@ -1,7 +1,7 @@
 GPIO-counter
 ============
 
-Counts pulses on specified GPIO pin and writes to a logfile
+Counts pulses on specified GPIO pin and writes to a logfile. I use this to count the pulses from my electric power meter (DDS-238), where each pulse is 1 Wh (as 1000 pulses per kWh).
 
 
 <pre><code>
@@ -28,3 +28,13 @@ $ cat gpio-counter
 </code></pre>
 
 You can feed this info into MRTG
+
+To start the counter automatically start at boot time, do this:
+
+<pre><code>
+sudo crontab -e
+</code></pre>
+and fill out:
+<pre><code>
+@reboot         /path/to/gpio23-counter.py &
+</code></pre>
