@@ -17,13 +17,14 @@ cd git
 git clone https://github.com/sanderjo/GPIO-counter.git
 cd GPIO-counter
 chmod +x gpio-counter.py
-</pre></code>
+</code></pre>
 
-GPIO-counter is now installed
+The GPIO-counter is now installed.
 
 Usage
 -----
-Usage is like this:
+
+To use gpio-counter from the commandline, do this:
 
 <pre><code>
 $ sudo /home/pi/git/gpio-counter.py 23 /var/log/gpio23-counter.log debug
