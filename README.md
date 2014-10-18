@@ -10,18 +10,21 @@ Prerequisites:
 
 
 <pre><code>
-$ sudo python gpio23-counter.py debug
+$ sudo python gpio-counter.py 23 /home/pi/mylogfile-gpio23.txt debug
 Verbose is On
-Logfile is ./gpio-counter
-Current value is 0
-New value is 221
-New value is 222
-New value is 223
-New value is 224
-New value is 225
-New value is 226
-New value is 227
-New value is 228
+GPIO is 23
+Logfile is /home/pi/mylogfile-gpio23.txt
+Current value is 320
+New value is 321
+New value is 322
+New value is 323
+New value is 324
+New value is 325
+New value is 326
+New value is 327
+New value is 328
+New value is 329
+New value is 330
 </code></pre>
 
 Contents of the resulting logfile
@@ -41,5 +44,5 @@ sudo crontab -e
 </code></pre>
 and fill out:
 <pre><code>
-@reboot         /path/to/gpio23-counter.py &
+@reboot         gpio-counter.py 23 /home/pi/mylogfile-gpio23.txt &
 </code></pre>
