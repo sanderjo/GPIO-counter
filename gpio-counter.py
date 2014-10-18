@@ -10,6 +10,12 @@ import signal
 ############################################################################################################
 ############################################################################################################
 
+def printusage(progname):
+        print progname + ' <gpio-pin-number> <filename> [debug]'
+        print 'Example usage: ' 
+	print progname + ' 23 /path/to/mylogfile'
+        print progname + ' 23 /path/to/mylogfile debug'
+	sys.exit(-1)
 
 def signal_handler(signal, frame):
         if verbose:
@@ -40,26 +46,39 @@ def writevalue(myworkfile,value):
 
 ######### Initialization
 
-#### Settings
 
-mygpiopin = 23	# GPIO pin 23
-logfile = './gpio-counter'
+#### get input parameters:
+
+try:
+	mygpiopin = int(sys.argv[1])
+	logfile = sys.argv[2]
+except:
+	printusage(sys.argv[0])
+
+verbose = False
+try:
+	if sys.argv[3] == 'debug':
+		verbose = True
+		print "Verbose is On"
+	else:
+		printusage(sys.argv[0])
+except:
+	pass
+
+#### if verbose, print some info
+
+verbose = True
+
+if verbose:
+	print "GPIO is " + str(mygpiopin)
+	print "Logfile is " + logfile
+	print "Current value is " + str(readvalue(logfile))
+
 
 #### setup
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(mygpiopin, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
-
-#### get input parameters:
-
-if len(sys.argv) > 1 and sys.argv[1] == 'debug':
-	verbose = True
-	print "Verbose is On"
-	print "Logfile is " + logfile
-	print "Current value is " + str(readvalue(logfile))
-	print "GPIO is " + str(mygpiopin)
-else:
-	verbose = False
 
 signal.signal(signal.SIGINT, signal_handler)	# SIGINT = interrupt by CTRL-C
 
