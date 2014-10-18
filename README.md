@@ -5,7 +5,7 @@ Counts pulses on specified GPIO pin and writes to a logfile. I use this to count
 
 Prerequisites:
 - Raspberry Pi (tested on Raspbian)
-- GPIO library installed
+- GPIO python library installed: "sudo apt-get install RPi.GPIO"
 
 
 
