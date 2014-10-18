@@ -18,3 +18,13 @@ New value is 226
 New value is 227
 New value is 228
 </code></pre>
+
+Contents of the resulting logfile
+
+<pre><code>
+$ cat gpio-counter 
+228
+2014-10-18 11:03:34.814608
+</code></pre>
+
+You can feed this info into MRTG
