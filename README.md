@@ -80,3 +80,22 @@ root      2136     1  0 12:22 ?        00:00:00 python /home/pi/git/GPIO-counter
 
 You should only see one line. If you see two lines, check that you filled out the ampersand at the end of the crontab line.
 
+You can continously monitor the output to the log file with 'tail -f':
+
+<pre><code>
+$ tail -f /var/log/gpio23-counter.log
+770
+2014-10-18 14:35:45.152377
+tail: /var/log/gpio23-counter.log: file truncated
+771
+2014-10-18 14:46:44.906105
+tail: /var/log/gpio23-counter.log: file truncated
+773
+2014-10-18 14:46:52.028205
+tail: /var/log/gpio23-counter.log: file truncated
+774
+2014-10-18 14:46:54.065684
+tail: /var/log/gpio23-counter.log: file truncated
+</code></pre>
+
+
