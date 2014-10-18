@@ -65,5 +65,5 @@ $ ps -ef | grep -i gpio | grep python
 root      2136     1  0 12:22 ?        00:00:00 python /home/pi/git/GPIO-counter/gpio-counter.py 23 /var/log/gpio23-counter
 </code></pre>
 
-You should only see one line. If you see two lines, check that you fill out the ampersand at the end of the crontab line.
+You should only see one line. If you see two lines, check that you filled out the ampersand at the end of the crontab line.
 
