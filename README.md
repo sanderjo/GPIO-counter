@@ -42,7 +42,7 @@ $ cat /var/log/gpio23-counter.log
 
 You can feed this info into MRTG
 
-Start at boot / Run a daemon
+Start at boot / Run as daemon
 ----------------------------
 
 To start the counter automatically start at boot time, do this:
