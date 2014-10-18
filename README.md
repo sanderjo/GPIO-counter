@@ -14,7 +14,7 @@ Advice:
 Usage
 -----
 <pre><code>
-$ sudo ./gpio-counter.py 23 /var/log/gpio23-counter debug
+$ sudo ./gpio-counter.py 23 /var/log/gpio23-counter.log debug
 Verbose is On
 GPIO is 23
 Logfile is /var/log/gpio23-counter
@@ -35,7 +35,7 @@ Contents of the resulting logfile
 ---------------------------------
 
 <pre><code>
-$ cat /var/log/gpio23-counter
+$ cat /var/log/gpio23-counter.log
 764
 2014-10-18 12:22:27.207244
 </code></pre>
@@ -52,7 +52,7 @@ sudo crontab -e
 </code></pre>
 and fill out:
 <pre><code>
-@reboot			/home/pi/git/GPIO-counter/gpio-counter.py 23 /var/log/gpio23-counter &
+@reboot			/home/pi/git/GPIO-counter/gpio-counter.py 23 /var/log/gpio23-counter.log &
 </code></pre>
 
 Don't forget the ampersand at the end
@@ -62,7 +62,7 @@ Reboot your Raspberry, and check the daemon is running:
 <pre><code>
 
 $ ps -ef | grep -i gpio | grep python
-root      2136     1  0 12:22 ?        00:00:00 python /home/pi/git/GPIO-counter/gpio-counter.py 23 /var/log/gpio23-counter
+root      2136     1  0 12:22 ?        00:00:00 python /home/pi/git/GPIO-counter/gpio-counter.py 23 /var/log/gpio23-counter.log
 </code></pre>
 
 You should only see one line. If you see two lines, check that you filled out the ampersand at the end of the crontab line.
