@@ -52,5 +52,18 @@ sudo crontab -e
 </code></pre>
 and fill out:
 <pre><code>
-@reboot         /path/to/gpio-counter.py 23 /home/pi/mylogfile-gpio23.txt &
+@reboot			/home/pi/git/GPIO-counter/gpio-counter.py 23 /var/log/gpio23-counter &
 </code></pre>
+
+Don't forget the ampersand at the end
+
+Reboot your Raspberry, and check the daemon is running:
+
+<pre><code>
+
+$ ps -ef | grep -i gpio | grep python
+root      2136     1  0 12:22 ?        00:00:00 python /home/pi/git/GPIO-counter/gpio-counter.py 23 /var/log/gpio23-counter
+</code></pre>
+
+You should only see one line. If you see two lines, check that you fill out the ampersand at the end of the crontab line.
+
