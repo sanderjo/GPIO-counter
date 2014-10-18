@@ -14,10 +14,10 @@ Advice:
 Usage
 -----
 <pre><code>
-$ sudo ./gpio-counter.py 23 /home/pi/mylogfile-gpio23.txt debug
+$ sudo ./gpio-counter.py 23 /var/log/gpio23-counter debug
 Verbose is On
 GPIO is 23
-Logfile is /home/pi/mylogfile-gpio23.txt
+Logfile is /var/log/gpio23-counter
 Current value is 320
 New value is 321
 New value is 322
