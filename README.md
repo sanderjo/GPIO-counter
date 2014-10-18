@@ -83,19 +83,18 @@ You should only see one line. If you see two lines, check that you filled out th
 You can continously monitor the output to the log file with 'tail -f':
 
 <pre><code>
-$ tail -f /var/log/gpio23-counter.log
-770
-2014-10-18 14:35:45.152377
-tail: /var/log/gpio23-counter.log: file truncated
-771
-2014-10-18 14:46:44.906105
-tail: /var/log/gpio23-counter.log: file truncated
-773
-2014-10-18 14:46:52.028205
-tail: /var/log/gpio23-counter.log: file truncated
-774
-2014-10-18 14:46:54.065684
-tail: /var/log/gpio23-counter.log: file truncated
+$ tail -f /var/log/gpio23-counter.log 2> /dev/null
+879
+2014-10-18 15:02:25.868110
+880
+2014-10-18 15:19:35.624902
+881
+2014-10-18 15:19:38.109248
+883
+2014-10-18 15:19:42.162002
+884
+2014-10-18 15:19:44.190460
+886
 </code></pre>
 
 
