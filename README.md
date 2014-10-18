@@ -7,14 +7,26 @@ Prerequisites
 -------------
 - Raspberry Pi (tested on Raspbian)
 - GPIO python library installed: "sudo apt-get install RPi.GPIO"
-Advice:
-- make gpio-counter.py executable with "chmod +x gpio-counter.py"
 
+Install
+-------
+<pre><code>
+cd
+mkdir git
+cd git
+git clone https://github.com/sanderjo/GPIO-counter.git
+cd GPIO-counter
+chmod +x gpio-counter.py
+</pre></code>
+
+GPIO-counter is now installed
 
 Usage
 -----
+Usage is like this:
+
 <pre><code>
-$ sudo ./gpio-counter.py 23 /var/log/gpio23-counter.log debug
+$ sudo /home/pi/git/gpio-counter.py 23 /var/log/gpio23-counter.log debug
 Verbose is On
 GPIO is 23
 Logfile is /var/log/gpio23-counter
