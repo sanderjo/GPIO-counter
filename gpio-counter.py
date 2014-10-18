@@ -65,9 +65,7 @@ try:
 except:
 	pass
 
-#### if verbose, print some info
-
-verbose = True
+#### if verbose, print some info to stdout
 
 if verbose:
 	print "GPIO is " + str(mygpiopin)
