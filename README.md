@@ -1,7 +1,7 @@
 GPIO-counter
 ============
 
-Counts pulses on specified GPIO pin and writes to a logfile. I use this to count the pulses from my electric power meter (DDS-238), where each pulse is 1 Wh (as 1000 pulses per kWh).
+Counts pulses on specified GPIO pin and writes to a logfile. I use this to count the pulses from my electric power meter (DDS238), where each pulse is 1 Wh (as 1000 pulses per kWh).
 
 Prerequisites
 -------------
