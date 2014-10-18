@@ -52,5 +52,5 @@ sudo crontab -e
 </code></pre>
 and fill out:
 <pre><code>
-@reboot         gpio-counter.py 23 /home/pi/mylogfile-gpio23.txt &
+@reboot         /path/to/gpio-counter.py 23 /home/pi/mylogfile-gpio23.txt &
 </code></pre>
